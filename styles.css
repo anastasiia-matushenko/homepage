@@ -224,6 +224,18 @@ body {
   padding-left: 20px;
 }
 
+.experiences__company-project-technologies-title {
+  color: var(--secondary-text-color);
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.experiences__company-project-technologies {
+  color: var(--secondary-text-color);
+  text-align: justify;
+}
+
 .additional-info {
   flex: 1 1 40%;
 }
