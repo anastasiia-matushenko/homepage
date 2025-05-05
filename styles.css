@@ -50,7 +50,7 @@ body {
   margin-bottom: 15px;
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .main-info,
   .contact_info_container {
     flex-direction: column;
@@ -140,6 +140,10 @@ body {
   width: 20px;
   display: flex;
   justify-content: center;
+}
+
+.contact-info__item-icon path {
+  fill: var(--icon-color);
 }
 
 .contact-info__item-icon {
@@ -332,7 +336,7 @@ body {
   flex: 1;
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .hobbies__content {
     flex-direction: column;
     align-items: flex-start;
