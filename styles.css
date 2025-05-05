@@ -88,29 +88,55 @@ body {
   margin-bottom: 30px;
 }
 
+.contact_info_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+
 .contact-info__block {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 15px;
+  flex: 1;
+}
+
+.contact-info__block:last-child {
+  align-items: flex-end;
+}
+
+.contact-info__block:last-child .contact-info__item {
+  justify-content: flex-end;
 }
 
 .contact-info__block--center {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  margin: 0 40px;
+}
+
+.contact-info__avatar {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 3px solid;
+  border-color: var(--text-decoration-color);
 }
 
 .contact-info__item {
   color: var(--secondary-text-color);
   text-decoration: none;
   display: flex;
-  justify-content: start;
-}
-
-.contact-info__item:not(:last-child) {
-  margin-bottom: 20px;
+  align-items: center;
+  gap: 10px;
 }
 
 .contact-info__item-icon-wrapper {
-  margin-right: 10px;
   width: 20px;
   display: flex;
   justify-content: center;
@@ -125,13 +151,8 @@ body {
   vertical-align: text-bottom;
 }
 
-.contact-info__avatar {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border: 3px solid;
-  border-color: var(--text-decoration-color);
+.contact-info__item-icon path {
+  fill: var(--icon-color);
 }
 
 /* Intro and skills styles */
@@ -171,6 +192,10 @@ body {
 .skills__text {
   color: var(--secondary-text-color);
   text-align: justify;
+}
+
+.skills:not(:first-child) {
+  margin-top: 20px;
 }
 
 /* Experience and additional info styles */
@@ -279,4 +304,47 @@ body {
 
 .additional-info__languages-item {
   color: var(--secondary-text-color);
+}
+
+.hobbies {
+  margin-bottom: 20px;
+}
+
+.hobbies__header {
+  color: var(--secondary-text-color);
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.hobbies__content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.hobbies__image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hobbies__text {
+  color: var(--secondary-text-color);
+  text-align: justify;
+  flex: 1;
+}
+
+@media screen and (max-width: 576px) {
+  .hobbies__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hobbies__image {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
 }
